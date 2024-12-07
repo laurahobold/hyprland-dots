@@ -1,0 +1,27 @@
+ /* ---- oxocarbon  ---- */
+
+* {
+    active-background: #FC9867;
+    active-foreground: #FF6188;
+    normal-background: #908E8F;
+    normal-foreground: #78DCE8;
+    urgent-background: #f5bde6;
+    urgent-foreground: #A9DC76;
+
+    alternate-active-background: #FDF9F3;
+    alternate-active-foreground: #AB9DF2;
+    alternate-normal-background: #908E8F;
+    alternate-normal-foreground: #f5bde6;
+    alternate-urgent-background: #A9DC76;
+    alternate-urgent-foreground: #FC9867;
+
+    selected-active-background: #AB9DF2;
+    selected-active-foreground: #FDF9F3;
+    selected-normal-background: #908E8F;
+    selected-normal-foreground: #f5bde6;
+    selected-urgent-background: #f5bde6;
+
+    background: rgba(17, 17, 17); /* Semi-transparent dark */
+    foreground: #FDF9F3;
+    border-color: #f5bde6;
+}

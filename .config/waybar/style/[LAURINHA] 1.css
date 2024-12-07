@@ -1,0 +1,128 @@
+/* ---- 💫 Refined Cyberpunk Pink/Purple Theme 💫 ---- */
+
+/* General Settings */
+* {
+    font-family: "Fira Code", "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #1e1e2e;
+    color: #e8d9ff;
+    text-shadow: 0 0 4px #d4b5ff, 0 0 8px #b19cd9;
+    border-radius: 6px;
+}
+
+/* Bar Settings */
+window#waybar {
+    background: linear-gradient(135deg, #2a2139, #3d2859);
+    border: 1px solid #8c4fbf;
+    box-shadow: 0 0 15px #8c4fbf, 0 0 30px #ad73ff;
+    padding: 6px 10px;
+    margin: 0 6px;
+}
+
+/* Tooltip */
+tooltip {
+    background: rgba(30, 20, 50, 0.95);
+    color: #f0d8ff;
+    border: 1px solid #bf80ff;
+    border-radius: 8px;
+    padding: 5px 10px;
+    text-shadow: 0 0 6px #bf80ff;
+}
+
+/* Left Modules */
+.modules-left {
+    background-color: rgba(50, 40, 60, 0.8);
+    border: 1px solid #d580ff;
+    border-radius: 8px;
+    padding: 4px 8px;
+    color: #ffccff;
+    text-shadow: 0 0 10px #ffccff;
+    margin-right: 8px;
+}
+
+/* Center Modules */
+.modules-center {
+    background-color: rgba(40, 30, 50, 0.8);
+    border: 1px solid #b573ff;
+    border-radius: 8px;
+    padding: 4px 8px;
+    color: #ffb3ff;
+    text-shadow: 0 0 8px #ffb3ff;
+}
+
+/* Right Modules */
+.modules-right {
+    background-color: rgba(30, 20, 50, 0.8);
+    border: 1px solid #cc88ff;
+    border-radius: 8px;
+    padding: 4px 8px;
+    color: #f3d0ff;
+    text-shadow: 0 0 10px #f3d0ff;
+}
+
+/* Workspaces */
+#workspaces button {
+    background-color: rgba(60, 40, 80, 0.7);
+    color: #b580ff;
+    border: 1px solid #d6a8ff;
+    border-radius: 6px;
+    padding: 6px;
+    margin: 0 4px;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 0 0 5px #d6a8ff;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 230, 255, 0.9);
+    color: #8c4fbf;
+    text-shadow: 0 0 10px #8c4fbf, 0 0 20px #ffbfff;
+}
+
+/* Active Workspace */
+#workspaces button.active {
+    background-color: #e5c1ff;
+    color: #4c1c6d;
+    border: 1px solid #b573ff;
+    text-shadow: 0 0 10px #e5c1ff, 0 0 20px #ffccff;
+}
+
+/* Clock */
+#clock {
+    color: #f3d0ff;
+    text-shadow: 0 0 10px #f3d0ff, 0 0 20px #d6a8ff;
+}
+
+/* CPU & Memory */
+#cpu, #memory {
+    color: #d1aaff;
+    text-shadow: 0 0 10px #d1aaff;
+}
+
+/* Temperature */
+#temperature {
+    color: #ff99cc;
+    text-shadow: 0 0 10px #ff99cc;
+}
+
+/* Audio */
+#pulseaudio, #pulseaudio-slider {
+    color: #ffd1e0;
+    text-shadow: 0 0 10px #ffd1e0;
+}
+
+/* Network */
+#network {
+    color: #ff99e6;
+    text-shadow: 0 0 10px #ff99e6;
+}
+
+/* System Tray */
+#tray {
+    background-color: rgba(50, 30, 60, 0.8);
+    border: 1px solid #ff99e6;
+    border-radius: 6px;
+    padding: 6px;
+    color: #ffb3ff;
+    text-shadow: 0 0 10px #ffb3ff;
+}

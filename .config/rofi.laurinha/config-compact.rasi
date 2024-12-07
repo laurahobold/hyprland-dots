@@ -1,0 +1,42 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Main Config (compact) */
+
+@import "~/.config/rofi/master-config.rasi"  
+
+/* ---- Configuration ---- */ 
+configuration {
+  modi: "drun";
+}
+
+/* ---- Window ---- */
+
+
+/* ---- Inputbar ---- */
+inputbar {
+  background-image: url("~/.config/rofi/.current_wallpaper");
+}
+
+/* ---- Imagebox ---- */
+imagebox {
+  orientation: vertical;
+  children: [ "entry", "listview"];
+}
+
+/* ---- Entry input ---- */
+entry {
+  width: 23%;
+  placeholder: "View / Edit Hyprland Configs";
+}
+
+/* ---- Listview ---- */
+listview {
+  columns: 2;
+  lines: 6;
+  spacing: 0px;
+  border-radius: 12px;
+}
+
+/* ---- Element ---- */
+element {
+  border-radius: 10px;
+}

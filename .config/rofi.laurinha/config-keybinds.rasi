@@ -1,0 +1,20 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Main Config - For Keybinds generation */
+
+@import "~/.config/rofi/master-config.rasi"  
+
+/* ---- Entry ---- */
+entry {
+  width: 60%;
+  placeholder: "Search Keybinds";
+}
+
+/* ---- Listview ---- */
+listview {
+  columns: 3;
+  lines: 9;
+}
+
+window {
+    width: 60%;
+}

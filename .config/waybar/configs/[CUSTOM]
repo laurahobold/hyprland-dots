@@ -1,0 +1,45 @@
+/* ---- 💫 Simplified Top Bar Configuration 💫 ---- */
+
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  ],
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 2,
+"margin-left": 8,
+"margin-right": 8,
+
+
+"modules-left": [
+	"cpu",
+	"temperature",
+	"memory",
+	"disk",
+	"custom/menu",
+	],
+
+"modules-center": [
+	"clock",
+    "hyprland/workspaces",
+	],
+
+"modules-right": [
+	"wlr/taskbar",
+	"custom/lock",
+	"pulseaudio",
+	"pulseaudio#microphone",
+	"tray",
+	"custom/keyboard",
+	"custom/power",
+	],
+}
