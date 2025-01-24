@@ -1,0 +1,38 @@
+/* ---- 💫 Simplified Top Bar Configuration 💫 ---- */
+
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  ],
+"layer": "top",
+"height": 10, // Waybar height (to be removed for auto height)
+ "reload_style_on_change": true,
+"exclusive": true,
+"position": "top",
+"spacing": 0,
+"fixed-center": true,
+"margin-top": 0,
+"margin-bottom": 0,
+"margin-left": 5,
+"margin-right":5,
+
+"modules-left": [
+     "custom/menu",
+     "custom/player",
+     "custom/cava_mviz",
+	],
+
+"modules-center": [
+  	"hyprland/workspaces",
+	],
+
+  "modules-right": [
+    "group/motherboard",
+    "custom/keyboard",
+    "clock",
+    "custom/power",
+  ]
+}

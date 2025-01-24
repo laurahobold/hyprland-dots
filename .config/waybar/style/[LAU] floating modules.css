@@ -1,0 +1,304 @@
+/* ---- 💫 Complete Cyberpunk Pink/Purple Theme 💫 ---- */
+/* Define Variables */
+
+/* General Settings */
+* {
+    font-family: "OCRA", serif;
+    font-size: 10px;
+    font-weight: normal;
+    background-color: rgba(45, 30, 46, 0);
+    /*color: #fff2fb;*/
+    /*text-shadow: 0 0 2px rgba(255, 15, 127, 0.91), 0 0 5px rgba(255, 173, 212, 0.89);*/
+}
+
+/* Bar Settings */
+window#waybar {
+    /*border: 1px solid #8c4fbf;*/
+    /*box-shadow: 0 0 15px #8c4fbf, 0 0 30px #ad73ff;*/
+    padding: 0px 0px;
+    margin: 0 0px;
+}
+
+/* Tooltip */
+tooltip {
+    background: rgba(30, 20, 50, 0.95);
+    color: #f0d8ff;
+    /*border: 1px solid #bf80ff;*/
+    border-radius: 8px;
+    padding: 5px 15px;
+    text-shadow: 0 0 6px #bf80ff;
+}
+
+/* Left Modules */
+.modules-left {
+    background-image: linear-gradient(45deg, rgba(52, 52, 52, 0.8), rgba(162, 76, 96, 0.8), rgba(108, 80, 136, 0.8));
+    /*border: 1px solid #d580ff;*/
+    border-radius: 8px;
+    padding: 2px 0px;
+    color: #ffccff;
+    /*text-shadow: 0 0 10px #ffccff;*/
+    margin-right: 8px;
+}
+
+/* Center Modules */
+.modules-center {
+    background-image: linear-gradient(45deg, rgba(52, 52, 52, 0.8), rgba(162, 76, 96, 0.8), rgba(108, 80, 136, 0.8));
+    /*border: 1px solid #b573ff;*/
+    border-radius: 8px;
+    padding: 2px 0px;
+    color: #ffb3ff;
+}
+
+/* Right Modules */
+.modules-right {
+    background-image: linear-gradient(45deg, rgba(52, 52, 52, 0.8), rgba(162, 76, 96, 0.8), rgba(108, 80, 136, 0.8));
+    /*border: 1px solid #cc88ff;*/
+    border-radius: 8px;
+    padding: 2px 0px;
+    color: #f3d0ff;
+}
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-power_vertical,
+#custom-power,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+    /*background-image: linear-gradient(45deg, #343434, #ff598b, #D2A6FF);*/
+    border-radius: 6px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+#backlight {
+    padding-right: 2px;
+}
+#custom-power {
+    padding-left: 10px;
+    padding-right: 2px;
+}
+#custom-menu {
+    padding-right: 8px;
+}
+#custom-cycle_wall {
+    padding-right: 2px;
+}
+#network {
+    padding-right: 12px;
+}
+/*-----Indicators----*/
+#custom-hypridle.notactive,
+#idle_inhibitor.activated {
+    color: #39FF14;
+}
+
+#pulseaudio.muted {
+    color: #cc3436;
+}
+#temperature.critical {
+    background: red;
+    color: black;
+}
+
+@keyframes blink {
+    to {
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pulseaudio-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    background-color: #7f849c;
+    min-width: 80px;
+    min-height: 5px;
+    border-radius: 5px;
+}
+
+#pulseaudio-slider highlight {
+    min-height: 10px;
+    border-radius: 5px;
+}
+
+#backlight-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#backlight-slider trough {
+    background-color: #7f849c;
+    min-width: 80px;
+    min-height: 10px;
+    border-radius: 5px;
+}
+
+#backlight-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+}
+
+/* Custom Icons */
+#custom-icons {
+    color: #ff99e6;
+    text-shadow: 0 0 10px #ff99e6;
+}
+
+/* Battery Module */
+#battery {
+    background-color: rgba(60, 40, 80, 0.7);
+    color: #ffccff;
+    border: 1px solid #d6a8ff;
+    border-radius: 6px;
+    text-shadow: 0 0 8px #d6a8ff;
+}
+
+/* Temperature */
+#temperature {
+    color: #ff99cc;
+    text-shadow: 0 0 10px #ff99cc;
+}
+
+/* Memory Module */
+#memory {
+    color: #d1aaff;
+    text-shadow: 0 0 10px #d1aaff;
+}
+
+/* Taskbar */
+#wlr-taskbar {
+    color: #50fa7b;
+    text-shadow: 0 0 10px #50fa7b;
+}
+#taskbar.empty {
+    background: none;
+}
+
+/* MPRIS Module */
+#custom-player {
+    /*font-weight: bold;*/
+    color: #ff79c6;
+    text-shadow: 0 0 10px #ff79c6;
+
+}
+
+/* Pulseaudio Module */
+#pulseaudio {
+    color: #ffd1e0;
+    text-shadow: 0 0 10px #ffd1e0;
+}
+
+/* Clock */
+#clock {
+    color: #f3d0ff;
+    text-shadow: 0 0 10px #f3d0ff, 0 0 20px #d6a8ff;
+}
+
+/* Keyboard */
+#custom-keyboard {
+    color: #8be9fd;
+    text-shadow: 0 0 10px #8be9fd;
+}
+
+/* Notifications */
+#custom-notifications {
+    color: #ff5555;
+    text-shadow: 0 0 10px #ff5555;
+}
+
+/* Power Module */
+#custom-power {
+    color: #ffb86c;
+    text-shadow: 0 0 10px #ffb86c;
+}
+
+/* Workspaces */
+#workspaces button {
+    background-color: rgba(60, 40, 80, 0.7);
+    color: #b580ff;
+    /*border: 1px solid #d6a8ff;*/
+    border-radius: 6px;
+    padding: 6px;
+    margin: 0 4px;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 0 0 5px #d6a8ff;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 230, 255, 0.9);
+    color: #8c4fbf;
+    text-shadow: 0 0 10px #8c4fbf, 0 0 20px #ffbfff;
+}
+
+/* Active Workspace */
+#workspaces button.active {
+    background-color: #e5c1ff;
+    color: #4c1c6d;
+    /*border: 1px solid #b573ff;*/
+    text-shadow: 0 0 10px #e5c1ff, 0 0 20px #ffccff;
+}

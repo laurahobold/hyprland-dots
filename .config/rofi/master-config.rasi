@@ -1,10 +1,10 @@
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Master Config 1080p*/
+/* Master Config 1440p*/
 
 /* ---- Configuration ---- */
 
 configuration {
-	font:						"Iosevka Expanded 12";
+	font:						"Fira Code SemiBold 13";
 	modi:                       "drun,run,filebrowser";
     show-icons:                 true;
     display-drun:               "Apps";
@@ -12,7 +12,7 @@ configuration {
     display-filebrowser:        "Files";
     display-window:             "Windows";
 	drun-display-format:        "{name}";
-	hover-select:               false;
+	hover-select:               true;
 	me-select-entry:            "MouseSecondary";
     me-accept-entry:            "MousePrimary";
 	window-format:              "{w} · {c} · {t}";
@@ -55,7 +55,7 @@ window {
 
 /* ----- Main Box ----- */
 mainbox {
-	padding:					 2px;
+	padding:					 15px;
     enabled:                     true;
     orientation:                 vertical;
     children:                    [ "inputbar", "listbox" ];
@@ -66,12 +66,13 @@ mainbox {
 /* ---- Inputbar ---- */
 inputbar {
     enabled:                     true;
-    padding:                     10px 10px 10px 10px;
-    margin:                      0px;
+    padding:                     10px 10px 100px 10px;
+    margin:                      10px;
     background-color:            transparent;
     border-radius:               25px;
     orientation:                 horizontal;
     children:                    ["entry", "dummy", "mode-switcher" ];
+    background-image:            url("~/.config/rofi/.current_wallpaper", width);
 }
 
 /* ---- Entry input ---- */
@@ -79,22 +80,19 @@ entry {
     enabled:                     true;
     expand:                      false;
     width:                       20%;
-    height: 35%;
-    padding:                     20px;
-    border-radius:               10px;
+    padding:                     10px;
+    border-radius:               12px;
     background-color:            @selected;
     text-color:                  @text-selected;
     cursor:                      text;
-    placeholder:                 "Search "; // << Search symbol
+    placeholder:                 "🖥️ Search "; // << Search symbol
     placeholder-color:           inherit;
-    	font:					"Iosevka Expanded 12";
 }
 
 /* ---- Listbox ---- */
 listbox {
-    spacing:                     0px;
-    margin:                      20px 30px 0 0;
-    padding:                     20px;
+    spacing:                     10px;
+    padding:                     10px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "message", "listview" ];
@@ -103,16 +101,16 @@ listbox {
 /* ---- Listview ---- */
 listview {
     enabled:                     true;
-    columns:                     9;
+    columns:                     2;
     lines:                       6;
-    cycle:                       false;
-    dynamic:                     false;
+    cycle:                       true;
+    dynamic:                     true;
     scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                false;
-    fixed-columns:               false;    
-    spacing:                     0px;
+    fixed-columns:               true;    
+    spacing:                     10px;
     background-color:            transparent;
 
 //  Adapt rofi theme
@@ -133,7 +131,7 @@ mode-switcher{
 }
 button {
     width:                       5%;
-    padding:                     5px;
+    padding:                     12px;
     border-radius:               12px;
     background-color:            @text-selected;
     text-color:                  @text-color;
@@ -146,19 +144,18 @@ button selected {
 
 /* ---- Scrollbar ---- */
 scrollbar {
-    width:        2px ;
+    width:        4px ;
     border:       0;
     handle-color: @border-color;
-    handle-width: 5px ;
+    handle-width: 8px ;
     padding:      0;
 }
 
 /* ---- Elements ---- */
 element {
     enabled:                     true;
-    spacing:                     2px;
-    padding:                     15px;
-    margin:                     10px;
+    spacing:                     10px;
+    padding:                     10px;
     border-radius:               12px;
     background-color:            transparent;
     cursor:                      pointer;
@@ -178,10 +175,11 @@ element normal.active {
 }
 
 element selected.normal {
-    border:                      1px 3px 1px 3px;
+    border:                      1px 6px 1px 6px;
     border-radius:               16px;
-    background-color:                @selected;
-    text-color:                  #000;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @selected;
 }
 
 element selected.urgent {
@@ -211,7 +209,7 @@ element-icon {
     cursor:                      inherit;
 }
 element-text {
-    font:						"Iosevka Expanded 12";
+    font:						"Fira Code SemiBold 16";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
@@ -225,7 +223,7 @@ message {
     border:                      0px;
 }
 textbox {
-    padding:                     5px;
+    padding:                     12px;
     border-radius:               10px;
     background-color:            @background-alt;
     text-color:                  @background;

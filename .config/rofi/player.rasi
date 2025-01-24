@@ -1,0 +1,335 @@
+/* ---- Custom Rofi Theme for Media Popup ---- */
+
+/* Global Styles */
+* {
+    background: #1e1e2e;       /* Dark background */
+    foreground: #f8f8f2;       /* Light text */
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    spacing: 8px;
+    font: "JetBrainsMono Nerd Font 14"; /* Change font size or family */
+}
+
+/* Window Settings */
+window {
+    width: 400px;               /* Width of the popup */
+    height: auto;               /* Automatically adjusts height */
+    border-radius: 12px;
+    padding: 20px;
+    background: linear-gradient(135deg, #2a2139, #3d2859);
+    shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content Box */
+mainbox {
+    margin: 10px;
+}
+
+/* Listview Settings */
+listview {
+    spacing: 10px;
+    scrollbar: true;
+    scrollbar-thumb: #ff79c6;   /* Scrollbar color */
+    border-radius: 6px;
+    background: rgba(50, 40, 60, 0.8); /* Background of the list */
+}
+
+/* Entry Field (Search bar) */
+entry {
+    enabled: false;             /* Disable search bar for this popup */
+    background: #282a36;
+    border: 2px solid #ff79c6;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+/* Buttons/Elements */
+element {
+    padding: 8px 12px;
+    background: rgba(40, 30, 50, 0.9); /* Button background */
+    border-radius: 8px;
+    highlight: #ff79c6;          /* Highlight color */
+    foreground: #f8f8f2;
+}
+
+element selected {
+    background: #44475a;         /* Highlighted button background */
+    foreground: #ffffff;         /* Highlighted text color */
+}
+
+/* Prompt Label */
+prompt {
+    foreground: #ff79c6;
+    font: "JetBrainsMono Nerd Font Bold 16";
+}
+/* ---- Custom Rofi Theme for Media Popup ---- */
+
+/* Global Styles */
+* {
+    background: #1e1e2e;       /* Dark background */
+    foreground: #f8f8f2;       /* Light text */
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    spacing: 8px;
+    font: "JetBrainsMono Nerd Font 14"; /* Change font size or family */
+}
+
+/* Window Settings */
+window {
+    width: 400px;               /* Width of the popup */
+    height: auto;               /* Automatically adjusts height */
+    border-radius: 12px;
+    padding: 20px;
+    background: linear-gradient(135deg, #2a2139, #3d2859);
+    shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content Box */
+mainbox {
+    margin: 10px;
+}
+
+/* Listview Settings */
+listview {
+    spacing: 10px;
+    scrollbar: true;
+    scrollbar-thumb: #ff79c6;   /* Scrollbar color */
+    border-radius: 6px;
+    background: rgba(50, 40, 60, 0.8); /* Background of the list */
+}
+
+/* Entry Field (Search bar) */
+entry {
+    enabled: false;             /* Disable search bar for this popup */
+    background: #282a36;
+    border: 2px solid #ff79c6;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+/* Buttons/Elements */
+element {
+    padding: 8px 12px;
+    background: rgba(40, 30, 50, 0.9); /* Button background */
+    border-radius: 8px;
+    highlight: #ff79c6;          /* Highlight color */
+    foreground: #f8f8f2;
+}
+
+element selected {
+    background: #44475a;         /* Highlighted button background */
+    foreground: #ffffff;         /* Highlighted text color */
+}
+
+/* Prompt Label */
+prompt {
+    foreground: #ff79c6;
+    font: "JetBrainsMono Nerd Font Bold 16";
+}
+/* ---- Custom Rofi Theme for Media Popup ---- */
+
+/* Global Styles */
+* {
+    background: #1e1e2e;       /* Dark background */
+    foreground: #f8f8f2;       /* Light text */
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    spacing: 8px;
+    font: "JetBrainsMono Nerd Font 14"; /* Change font size or family */
+}
+
+/* Window Settings */
+window {
+    width: 400px;               /* Width of the popup */
+    height: auto;               /* Automatically adjusts height */
+    border-radius: 12px;
+    padding: 20px;
+    background: linear-gradient(135deg, #2a2139, #3d2859);
+    shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content Box */
+mainbox {
+    margin: 10px;
+}
+
+/* Listview Settings */
+listview {
+    spacing: 10px;
+    scrollbar: true;
+    scrollbar-thumb: #ff79c6;   /* Scrollbar color */
+    border-radius: 6px;
+    background: rgba(50, 40, 60, 0.8); /* Background of the list */
+}
+
+/* Entry Field (Search bar) */
+entry {
+    enabled: false;             /* Disable search bar for this popup */
+    background: #282a36;
+    border: 2px solid #ff79c6;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+/* Buttons/Elements */
+element {
+    padding: 8px 12px;
+    background: rgba(40, 30, 50, 0.9); /* Button background */
+    border-radius: 8px;
+    highlight: #ff79c6;          /* Highlight color */
+    foreground: #f8f8f2;
+}
+
+element selected {
+    background: #44475a;         /* Highlighted button background */
+    foreground: #ffffff;         /* Highlighted text color */
+}
+
+/* Prompt Label */
+prompt {
+    foreground: #ff79c6;
+    font: "JetBrainsMono Nerd Font Bold 16";
+}
+/* ---- Custom Rofi Theme for Media Popup ---- */
+
+/* Global Styles */
+* {
+    background: #1e1e2e;       /* Dark background */
+    foreground: #f8f8f2;       /* Light text */
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    spacing: 8px;
+    font: "JetBrainsMono Nerd Font 14"; /* Change font size or family */
+}
+
+/* Window Settings */
+window {
+    width: 400px;               /* Width of the popup */
+    height: auto;               /* Automatically adjusts height */
+    border-radius: 12px;
+    padding: 20px;
+    background: linear-gradient(135deg, #2a2139, #3d2859);
+    shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content Box */
+mainbox {
+    margin: 10px;
+}
+
+/* Listview Settings */
+listview {
+    spacing: 10px;
+    scrollbar: true;
+    scrollbar-thumb: #ff79c6;   /* Scrollbar color */
+    border-radius: 6px;
+    background: rgba(50, 40, 60, 0.8); /* Background of the list */
+}
+
+/* Entry Field (Search bar) */
+entry {
+    enabled: false;             /* Disable search bar for this popup */
+    background: #282a36;
+    border: 2px solid #ff79c6;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+/* Buttons/Elements */
+element {
+    padding: 8px 12px;
+    background: rgba(40, 30, 50, 0.9); /* Button background */
+    border-radius: 8px;
+    highlight: #ff79c6;          /* Highlight color */
+    foreground: #f8f8f2;
+}
+
+element selected {
+    background: #44475a;         /* Highlighted button background */
+    foreground: #ffffff;         /* Highlighted text color */
+}
+
+/* Prompt Label */
+prompt {
+    foreground: #ff79c6;
+    font: "JetBrainsMono Nerd Font Bold 16";
+}
+/* ---- Custom Rofi Theme for Media Popup ---- */
+
+/* Global Styles */
+* {
+    background: #1e1e2e;       /* Dark background */
+    foreground: #f8f8f2;       /* Light text */
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    spacing: 8px;
+    font: "JetBrainsMono Nerd Font 14"; /* Change font size or family */
+}
+
+/* Window Settings */
+window {
+    width: 400px;               /* Width of the popup */
+    height: auto;               /* Automatically adjusts height */
+    border-radius: 12px;
+    padding: 20px;
+    background: linear-gradient(135deg, #2a2139, #3d2859);
+    shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content Box */
+mainbox {
+    margin: 10px;
+}
+
+/* Listview Settings */
+listview {
+    spacing: 10px;
+    scrollbar: true;
+    scrollbar-thumb: #ff79c6;   /* Scrollbar color */
+    border-radius: 6px;
+    background: rgba(50, 40, 60, 0.8); /* Background of the list */
+}
+
+/* Entry Field (Search bar) */
+entry {
+    enabled: false;             /* Disable search bar for this popup */
+    background: #282a36;
+    border: 2px solid #ff79c6;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+/* Buttons/Elements */
+element {
+    padding: 8px 12px;
+    background: rgba(40, 30, 50, 0.9); /* Button background */
+    border-radius: 8px;
+    highlight: #ff79c6;          /* Highlight color */
+    foreground: #f8f8f2;
+}
+
+element selected {
+    background: #44475a;         /* Highlighted button background */
+    foreground: #ffffff;         /* Highlighted text color */
+}
+
+/* Prompt Label */
+prompt {
+    foreground: #ff79c6;
+    font: "JetBrainsMono Nerd Font Bold 16";
+}
