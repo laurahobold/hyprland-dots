@@ -8,38 +8,33 @@
   "$HOME/.config/waybar/ModulesGroups",
   ],
 "layer": "top",
-//"mode": "dock",
+"height": 10, // Waybar height (to be removed for auto height)
+ "reload_style_on_change": true,
 "exclusive": true,
-"passthrough": false,
 "position": "top",
-"spacing": 3,
+"spacing": 0,
 "fixed-center": true,
-"ipc": true,
-"margin-top": 2,
-"margin-left": 8,
-"margin-right": 8,
-
+"margin-top": 0,
+"margin-bottom": 0,
 
 "modules-left": [
-	"cpu",
-	"temperature",
-	"memory",
-	"disk",
-	"custom/menu",
+     "custom/menu",
+           "custom/icon-split",
+     "group/player",
+           "custom/icon-split",
+       	"hyprland/workspaces",
 	],
 
 "modules-center": [
-	"clock",
-    "hyprland/workspaces",
+  	"clock",
+       	"group/audio",
+
 	],
 
-"modules-right": [
-	"wlr/taskbar",
-	"custom/lock",
-	"pulseaudio",
-	"pulseaudio#microphone",
-	"tray",
-	"custom/keyboard",
-	"custom/power",
-	],
+  "modules-right": [
+  "group/taskbar",
+    "group/motherboard",
+    "group/right",
+    "custom/power",
+  ]
 }

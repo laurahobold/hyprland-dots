@@ -17,16 +17,22 @@ ART_PATH="/tmp/album_art.jpg"
 curl -s "$ART_URL" -o "$ART_PATH"
 
 # Create options for playback controls
-OPTIONS=$(cat <<EOF
-<img>$ART_PATH</img>
-<b>🎵 Song:</b> $TITLE
-<b>🎤 Artist:</b> $ARTIST
-<b>💿 Album:</b> $ALBUM
+CONTROLS=$(cat <<EOF
 ⏮ Previous
 ⏸ Play/Pause
 ⏭ Next
 🔀 Shuffle
 🔁 Repeat
+EOF
+)
+
+# Combine metadata and controls
+OPTIONS=$(cat <<EOF
+<b>🎵 Song:</b> $TITLE
+<b>🎤 Artist:</b> $ARTIST
+<b>💿 Album:</b> $ALBUM
+---
+$CONTROLS
 EOF
 )
 

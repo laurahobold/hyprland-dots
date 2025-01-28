@@ -14,25 +14,34 @@
 "position": "top",
 "spacing": 0,
 "fixed-center": true,
-"margin-top": 0,
+"margin-top": 5,
 "margin-bottom": 0,
-"margin-left": 5,
-"margin-right":5,
+"margin-left": 7,
+"margin-right":7,
 
 "modules-left": [
      "custom/menu",
-     "custom/player",
-     "custom/cava_mviz",
+     	"custom/separator#line",
+        "custom/player",
+     	"custom/separator#line",
+        "custom/cava_mviz",
 	],
 
 "modules-center": [
   	"hyprland/workspaces",
+  	"wlr/taskbar",
 	],
 
   "modules-right": [
     "group/motherboard",
+    	"custom/separator#line",
     "custom/keyboard",
+    	"custom/separator#line",
+
     "clock",
+    	"custom/separator#line",
+
     "custom/power",
+
   ]
 }

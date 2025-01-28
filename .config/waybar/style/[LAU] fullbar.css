@@ -1,333 +1,155 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Rainbow Spectrum */
+/* ---- 💫 Complete Cyberpunk Pink/Purple Theme 💫 ---- */
+/* Define Variables */
+/* Main Colors */
 
+@define-color fg         #f4cddb;
+@define-color bg         #1c1c1c;
+@define-color br         #f4cddb;
+
+/*@define-color active-bg       #b2939b;*/
+/*@define-color active-fg       #1b1116z;*/
+
+@define-color hover-bg        #313244;
+@define-color hover-fg        rgba(205, 214, 244, 0.75);
+
+@define-color white           #ffffff;
+@define-color black           #000000;
+@define-color pink           #ff598b;
+@define-color pink2           #C51C6D;
+
+/* Module Colors */
+
+@define-color module-fg       #f5e0dc;
+
+
+/* State Colors */
+
+@define-color good            #f5e0dc;
+@define-color warning         #f9e2af;
+@define-color critical        #f38ba8;
+@define-color full            #a6e3a1;
+@define-color charging        #cdd6f4;
+
+
+
+@define-color color1            #25181f;
+@define-color color2         #b17a8c;
+@define-color color3        #7b435a;
+@define-color color4            #8b4d67;
+@define-color color5        #FFC4D6;
+/* General Settings */
 * {
-font-family: "JetBrainsMono Nerd Font";
-font-weight: bold;
-min-height: 0;
-/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-font-size: 97%;
-font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-}
-
-window#waybar {
-  	background-color: rgba(0,0,0,0);
-  	transition-property: background-color;
-  	transition-duration: .5s;
-}
-
-window#waybar.hidden {
-  	opacity: 0.5;
-}
-
-window#waybar.empty,
-window#waybar.empty #window {
-	padding: 0px;
-	border: 0px;
+	font-family: "EurostileMed", Monospace;
+	font-size: 14px;
+	font-weight: normal;
 	background-color: transparent;
+	/*color: #fff2fb;*/
+	/*text-shadow: 0 0 2px rgba(255, 15, 127, 0.91), 0 0 5px rgba(255, 173, 212, 0.89);*/
+	min-height: 0;
+	padding: 0;
+	border: none;
+	margin: 0;
 }
 
+/* Bar Settings */
+window#waybar {
+	/*background: rgba(30, 28, 29, 0.95);*/
+	background:transparent;
+}
+
+/* Tooltip */
 tooltip {
-	background: #1e1e2e;
-	opacity: 0.8;
-	border-radius: 10px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #11111b;
+	background: rgba(30, 20, 50, 0.95);
+	color: #f0d8ff;
+	/*border: 1px solid #bf80ff;*/
+	border-radius: 8px;
+	padding: 4px 4px;
+	text-shadow: 0 0 6px #bf80ff;
+}
+.modules-left, .modules-center, .modules-right {
+	/*padding: 3px;*/
+	margin: 4px;
+	/*color: #a15b73;           !* Text color *!*/
+	/*background: #815162;*/
+	border-radius: 8px;
+	/*box-shadow: 0px 0px 2px 0.1rem rgb(248, 187, 210);*/
 }
 
-tooltip label{
-	color: #cdd6f4;
+
+.module {
+	margin: 0 3px;
+}
+/* Custom Icons */
+motherboard {
+	padding: 10px ;
+	background-color: @main-bg;
 }
 
-#taskbar button,
-#workspaces button {
-  	background-color: #d9e0ee;
-  	color: #3A3B3C;
-    box-shadow: none;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    padding-left: 4px;
-    padding-right: 4px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
-#taskbar button.active,
-#workspaces button.active {
-  	background-color: #eba0ac;
-  	color: #3A3B3C;
-    padding-left: 8px;
-    padding-right: 8px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
-#taskbar button:hover,
-#workspaces button:hover {
-    background: #eb6f92;
-    color: #f6c177;
-    padding-left: 3px;
-    padding-right: 3px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
-#backlight,
-#backlight-slider,
-#battery,
-#bluetooth,
-#clock,
-#cpu,
-#disk,
-#idle_inhibitor,
-#keyboard-state,
-#memory,
-#mode,
-#mpris,
-#network,
-#power-profiles-daemon,
-#pulseaudio,
-#pulseaudio-slider,
-#taskbar button,
-#taskbar,
-#temperature,
-#tray,
-#window,
-#wireplumber,
-#workspaces,
-#custom-backlight,
-#custom-browser,
-#custom-cava_mviz,
-#custom-cycle_wall,
-#custom-file_manager,
-#custom-keybinds,
-#custom-keyboard,
-#custom-light_dark,
-#custom-lock,
-#custom-hint,
-#custom-hypridle,
 #custom-menu,
-#custom-power_vertical,
-#custom-power,
-#custom-settings,
-#custom-spotify,
-#custom-swaync,
-#custom-tty,
-#custom-updater,
-#custom-weather,
-#custom-weather.clearNight,
-#custom-weather.cloudyFoggyDay,
-#custom-weather.cloudyFoggyNight,
-#custom-weather.default, 
-#custom-weather.rainyDay,
-#custom-weather.rainyNight,
-#custom-weather.severe,
-#custom-weather.showyIcyDay,
-#custom-weather.snowyIcyNight,
-#custom-weather.sunnyDay {
-	border-radius: 16px;
-  	color: #3A3B3C;
-  	border: 1px solid #b4befe;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	padding-right: 6px;
-	padding-left: 6px;
-}
-
-#backlight {
-	background-color: #cba6f7;
-}
-
-#battery {
-	background-color: #f9e2af;
-}
-
-@keyframes blink {
-		to {
-			color: #000000;
-		}
-}
-
-#battery.critical:not(.charging) {
-	background-color: #f38ba8;
-	color: #f38ba8;
-	animation-name: blink;
-	animation-duration: 0.5s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-
-#clock {
-	background-color: #a6e3a1;
-}
-
-#mpris {
-	background-color: #fab387;
-	color: black;
-}
 #custom-keyboard,
-#keyboard-state,
-#keyboard-state label,
-#keyboard-state label.locked,
-#cpu {
-	background-color: #89dceb;
+#custom-notifications,
+#custom-player
+{
+	color: #f1a0be;           /* Text color */
+
+	/*text-shadow: 0 0 1px rgb(169, 0, 78);*/
+	/*padding: 6px 10px;         !* Space around text/icons *!*/
+	border-radius: 0;       /* Slightly rounded corners */
+	/*margin-right: 5px;        !* Spacing between modules *!*/
+	/*border: 1px outset #f7a6c5;*/
+	/*box-shadow: 0 0 5px rgba(63, 63, 87, 0.79), 0 0 2px #ff287b;*/
 }
 
-#memory {
-	background-color: #eba0ac;
-}
 
-#disk {
-	background-color: #b4befe;
-}
-
-#tray {
-	background-color: #b4befe;
-}
-#tray > .passive {
-		-gtk-icon-effect: dim;
-}
-#tray > .needs-attention {
-		-gtk-icon-effect: highlight;
-}
-
-#custom-menu {
-	background-color: #f5c2e7;
-	/*padding: 1px;*/
-	padding-right: 10px;
-	border-radius: 16px;
-  	color: #3A3B3C;
-  	border: 1px solid #b4befe;
-}
-
+#custom-menu,
 #custom-power {
-	background-color: #f38ba8;
-	padding: 0px 0px 0px 6px;
-}
-
-#custom-updater {
-	background-color: #e6ed7b;
-}
-
-#custom-cava_mviz,
-#power-profiles-daemon,
-#custom-browser,
-#custom-file_manager,
-#custom-tty,
-#custom-settings {
-    background: linear-gradient(45deg, #14e81e 10%, #017ed5 54%, #8d00c4 90%);
-}
-
-#custom-cycle_wall {
-	background-color: #94e2d5;
-}
-
-#custom-swaync,
-#custom-weather {
-	background-color: #cba6f7;
-}
-
-#wireplumber {
-	background-color: #a6e3a1;
-}
-
-#wireplumber.muted {
-	background-color: #313244;
-	color: #cdd6f4;
-}
-
-#custom-lock {
-	background-color: #89dceb;
-}
-
-#temperature {
-  	background-color: #86b4fa;
-}
-
-#temperature.critical {
-  background-color: red;
-}
-
-#custom-power_vertical,
-#custom-light_dark,
-#custom-hypridle,
-#idle_inhibitor {
-  	background-color: #86b4fa;
-}
-
-/*-----Indicators----*/
-#custom-hypridle.notactive,
-#idle_inhibitor.activated {
-	color: #39FF14;
-}
-
-#bluetooth {
-	background-color: #89dceb;
-}
-#window {
-	background-color: #89dceb;
-}
-
-#custom-hint,
-#pulseaudio {
-	background-color: #fab387;
-}
-
-#pulseaudio.bluetooth {
-	background-color: #f5c2e7;
-}
-#pulseaudio.muted {
-	background-color: #313244;
-	color: #cdd6f4;
-}
-
-#network {
-	background-color: #89b4fa;
-	padding-right: 12px;
-}
-#network.disconnected,#network.disabled {
-	background-color: #313244;
-	color: #cdd6f4;
-}
-#pulseaudio-slider slider {
-	min-width: 0px;
-	min-height: 0px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
-}
-
-#pulseaudio-slider trough {
-	min-width: 80px;
-	min-height: 5px;
+	background: #d99cb5;
+	color: rgb(45, 36, 45);
+	border: 2px outset rgb(45, 36, 45);
+	padding: 4px 14px 4px 10px;
 	border-radius: 5px;
+	/*margin-right: 5px;*/
 }
 
-#pulseaudio-slider highlight {
-	min-height: 10px;
+
+/*#custom-keyboard {*/
+/*    background-color: @color3;*/
+/*    color: #ECEFF4;*/
+/*    padding: 4px 8px;*/
+/*    border-radius: 4px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+/*#custom-notifications {*/
+/*    background-color: @color4;*/
+/*    color: #ECEFF4;*/
+/*    padding: 4px 8px;*/
+/*    border-radius: 4px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+
+#custom-player {
+	/*background-image:*/
+	/*        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),*/
+	/*        url("/tmp/spotify_album_art_cropped.jpg");*/
+	/*background-blend-mode: darken;   !* or multiply/overlay/etc. *!    background-repeat: no-repeat;*/
+	/*background-position: center;*/
+	/*background-size: cover;*/
+	/* Optional: maybe give it a fixed height or some padding
+       so you can actually see the art: */
+	padding: 3px 8px;
+}
+
+#custom-separator {
+	font-size: 25px;
+	font-weight: lighter;
+}
+#player, #right, #motherboard, #taskbar, #clock, #workspaces {
+	color: #da4088;
+	background: rgb(45, 36, 45);
+	/*border: 1px solid #da4088;*/
+	padding: 3px 10px 3px 10px;
 	border-radius: 5px;
-}
-
-#backlight-slider slider {
-	min-width: 0px;
-	min-height: 0px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
-}
-
-#backlight-slider trough {
-	min-width: 80px;
-	min-height: 10px;
-	border-radius: 5px;
-}
-
-#backlight-slider highlight {
-	min-width: 10px;
-	border-radius: 5px;
-}
+	margin: 0px 4px;
+ }

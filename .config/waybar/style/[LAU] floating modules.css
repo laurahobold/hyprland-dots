@@ -1,22 +1,74 @@
 /* ---- 💫 Complete Cyberpunk Pink/Purple Theme 💫 ---- */
 /* Define Variables */
+/* Main Colors */
 
+@define-color main-fg         #f4cddb;
+@define-color main-bg         #1c1c1c;
+@define-color main-br         #f4cddb;
+
+/*@define-color active-bg       #b2939b;*/
+/*@define-color active-fg       #1b1116z;*/
+
+@define-color hover-bg        #313244;
+@define-color hover-fg        rgba(205, 214, 244, 0.75);
+
+@define-color white           #ffffff;
+@define-color black           #000000;
+@define-color pink           #ff598b;
+@define-color pink2           #C51C6D;
+
+/* Module Colors */
+
+@define-color module-fg       #f5e0dc;
+
+@define-color cpuinfo         #181825;
+@define-color memory          #1e1e2e;
+@define-color cpu             #313244;
+@define-color distro-fg       #000000;
+@define-color distro-bg       #9399b2;
+@define-color time            #313244;
+@define-color date            #1e1e2e;
+@define-color tray            #181825;
+
+@define-color pulseaudio      #181825;
+@define-color backlight       #1e1e2e;
+@define-color battery         #313244;
+@define-color power           #9399b2;
+
+/* State Colors */
+
+@define-color good            #f5e0dc;
+@define-color warning         #f9e2af;
+@define-color critical        #f38ba8;
+@define-color full            #a6e3a1;
+@define-color charging        #cdd6f4;
+
+
+
+@define-color color1            #25181f;
+@define-color color2         #b17a8c;
+@define-color color3        #7b435a;
+@define-color color4            #8b4d67;
+@define-color color5        #FFC4D6;
 /* General Settings */
 * {
-    font-family: "OCRA", serif;
-    font-size: 10px;
+    font-family: "Oxanium",Monospace;
+    font-size: 16px;
     font-weight: normal;
-    background-color: rgba(45, 30, 46, 0);
+    background-color: transparent;
     /*color: #fff2fb;*/
     /*text-shadow: 0 0 2px rgba(255, 15, 127, 0.91), 0 0 5px rgba(255, 173, 212, 0.89);*/
+    min-height: 0;
+    padding: 0;
+    border: none;
+    margin: 0;
 }
 
 /* Bar Settings */
 window#waybar {
-    /*border: 1px solid #8c4fbf;*/
-    /*box-shadow: 0 0 15px #8c4fbf, 0 0 30px #ad73ff;*/
-    padding: 0px 0px;
-    margin: 0 0px;
+    background: rgba(33, 22, 26, 0.91);
+    /*background:transparent;*/
+    border-radius: 10px;
 }
 
 /* Tooltip */
@@ -25,280 +77,162 @@ tooltip {
     color: #f0d8ff;
     /*border: 1px solid #bf80ff;*/
     border-radius: 8px;
-    padding: 5px 15px;
+    padding: 4px 4px;
     text-shadow: 0 0 6px #bf80ff;
 }
-
-/* Left Modules */
-.modules-left {
-    background-image: linear-gradient(45deg, rgba(52, 52, 52, 0.8), rgba(162, 76, 96, 0.8), rgba(108, 80, 136, 0.8));
-    /*border: 1px solid #d580ff;*/
+.modules-left, .modules-center, .modules-right {
+    /*padding: 3px;*/
+    border: 1px solid rgba(217, 141, 165, 0.68);
+    margin: 4px;
+    color: #21161a;           /* Text color */
+    background: rgba(194, 84, 126, 0.66);
+    /*background: #815162;*/
     border-radius: 8px;
-    padding: 2px 0px;
-    color: #ffccff;
-    /*text-shadow: 0 0 10px #ffccff;*/
-    margin-right: 8px;
+    /*box-shadow: 0px 0px 2px 0.1rem rgb(248, 187, 210);*/
 }
-
-/* Center Modules */
-.modules-center {
-    background-image: linear-gradient(45deg, rgba(52, 52, 52, 0.8), rgba(162, 76, 96, 0.8), rgba(108, 80, 136, 0.8));
-    /*border: 1px solid #b573ff;*/
-    border-radius: 8px;
-    padding: 2px 0px;
-    color: #ffb3ff;
+.module {
+    margin: 0 3px;
+}
+/* Custom Icons */
+motherboard {
+    padding: 10px ;
+    background-color: @main-bg;
 }
 
-/* Right Modules */
-.modules-right {
-    background-image: linear-gradient(45deg, rgba(52, 52, 52, 0.8), rgba(162, 76, 96, 0.8), rgba(108, 80, 136, 0.8));
-    /*border: 1px solid #cc88ff;*/
-    border-radius: 8px;
-    padding: 2px 0px;
-    color: #f3d0ff;
-}
-#backlight,
-#backlight-slider,
-#battery,
-#bluetooth,
-#clock,
-#cpu,
-#disk,
-#idle_inhibitor,
-#keyboard-state,
-#memory,
-#mode,
-#mpris,
-#network,
-#power-profiles-daemon,
-#pulseaudio,
-#pulseaudio-slider,
-#taskbar,
-#temperature,
-#tray,
-#window,
-#wireplumber,
-#workspaces,
-#custom-backlight,
-#custom-browser,
-#custom-cava_mviz,
-#custom-cycle_wall,
-#custom-file_manager,
-#custom-keybinds,
-#custom-keyboard,
-#custom-light_dark,
-#custom-lock,
-#custom-hint,
-#custom-hypridle,
-#custom-menu,
-#custom-power_vertical,
-#custom-power,
-#custom-settings,
-#custom-spotify,
-#custom-swaync,
-#custom-tty,
-#custom-updater,
-#custom-weather,
-#custom-weather.clearNight,
-#custom-weather.cloudyFoggyDay,
-#custom-weather.cloudyFoggyNight,
-#custom-weather.default,
-#custom-weather.rainyDay,
-#custom-weather.rainyNight,
-#custom-weather.severe,
-#custom-weather.showyIcyDay,
-#custom-weather.snowyIcyNight,
-#custom-weather.sunnyDay {
-    /*background-image: linear-gradient(45deg, #343434, #ff598b, #D2A6FF);*/
-    border-radius: 6px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-right: 6px;
-    padding-left: 6px;
-}
 #backlight {
     padding-right: 2px;
 }
-#custom-power {
-    padding-left: 10px;
-    padding-right: 2px;
-}
-#custom-menu {
-    padding-right: 8px;
-}
+
 #custom-cycle_wall {
     padding-right: 2px;
 }
 #network {
     padding-right: 12px;
 }
-/*-----Indicators----*/
-#custom-hypridle.notactive,
-#idle_inhibitor.activated {
-    color: #39FF14;
-}
 
-#pulseaudio.muted {
-    color: #cc3436;
-}
-#temperature.critical {
-    background: red;
-    color: black;
-}
-
-@keyframes blink {
-    to {
-        color: #000000;
-    }
-}
-
-#battery.critical:not(.charging) {
-    color: #f53c3c;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#pulseaudio-slider slider {
-    min-width: 0px;
-    min-height: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-}
-
-#pulseaudio-slider trough {
-    background-color: #7f849c;
-    min-width: 80px;
-    min-height: 5px;
-    border-radius: 5px;
-}
-
-#pulseaudio-slider highlight {
-    min-height: 10px;
-    border-radius: 5px;
-}
-
-#backlight-slider slider {
-    min-width: 0px;
-    min-height: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-}
-
-#backlight-slider trough {
-    background-color: #7f849c;
-    min-width: 80px;
-    min-height: 10px;
-    border-radius: 5px;
-}
-
-#backlight-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-}
-
-/* Custom Icons */
-#custom-icons {
-    color: #ff99e6;
-    text-shadow: 0 0 10px #ff99e6;
-}
-
-/* Battery Module */
-#battery {
-    background-color: rgba(60, 40, 80, 0.7);
-    color: #ffccff;
-    border: 1px solid #d6a8ff;
-    border-radius: 6px;
-    text-shadow: 0 0 8px #d6a8ff;
-}
-
-/* Temperature */
-#temperature {
-    color: #ff99cc;
-    text-shadow: 0 0 10px #ff99cc;
-}
-
-/* Memory Module */
-#memory {
-    color: #d1aaff;
-    text-shadow: 0 0 10px #d1aaff;
-}
-
-/* Taskbar */
-#wlr-taskbar {
-    color: #50fa7b;
-    text-shadow: 0 0 10px #50fa7b;
-}
 #taskbar.empty {
     background: none;
 }
 
-/* MPRIS Module */
-#custom-player {
-    /*font-weight: bold;*/
-    color: #ff79c6;
-    text-shadow: 0 0 10px #ff79c6;
+/* Apply the same style to the listed modules */
+#custom-menu,
+#custom-keyboard,
+#custom-notifications,
+/*#motherboard,*/
+#custom-player
+{
+    color: #ffc3db;           /* Text color */
 
+    /*text-shadow: 0 0 1px rgb(169, 0, 78);*/
+    /*padding: 6px 10px;         !* Space around text/icons *!*/
+    border-radius: 0;       /* Slightly rounded corners */
+    /*margin-right: 5px;        !* Spacing between modules *!*/
+    /*border: 1px outset #f7a6c5;*/
+    /*box-shadow: 0 0 5px rgba(63, 63, 87, 0.79), 0 0 2px #ff287b;*/
 }
 
-/* Pulseaudio Module */
-#pulseaudio {
-    color: #ffd1e0;
-    text-shadow: 0 0 10px #ffd1e0;
-}
 
-/* Clock */
-#clock {
-    color: #f3d0ff;
-    text-shadow: 0 0 10px #f3d0ff, 0 0 20px #d6a8ff;
+#custom-wlr-taskbar {
+    padding: 10px;
+    margin:10px;
 }
-
-/* Keyboard */
-#custom-keyboard {
-    color: #8be9fd;
-    text-shadow: 0 0 10px #8be9fd;
-}
-
-/* Notifications */
-#custom-notifications {
-    color: #ff5555;
-    text-shadow: 0 0 10px #ff5555;
-}
-
-/* Power Module */
+#custom-menu,
 #custom-power {
-    color: #ffb86c;
-    text-shadow: 0 0 10px #ffb86c;
+    background: #ffc3db;
+    color: @main-bg;
+    padding: 2px 14px 2px 10px;
+    border-radius: 5px;
+    margin: 4px
+    /*margin-right: 5px;*/
 }
 
-/* Workspaces */
-#workspaces button {
-    background-color: rgba(60, 40, 80, 0.7);
-    color: #b580ff;
-    /*border: 1px solid #d6a8ff;*/
-    border-radius: 6px;
-    padding: 6px;
-    margin: 0 4px;
-    transition: all 0.3s ease-in-out;
-    text-shadow: 0 0 5px #d6a8ff;
+/*#clock {*/
+/*    background: @color2;*/
+/*    padding: 4px 8px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+/*#custom-keyboard {*/
+/*    background-color: @color3;*/
+/*    color: #ECEFF4;*/
+/*    padding: 4px 8px;*/
+/*    border-radius: 4px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+/*#custom-notifications {*/
+/*    background-color: @color4;*/
+/*    color: #ECEFF4;*/
+/*    padding: 4px 8px;*/
+/*    border-radius: 4px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+
+/*#motherboard {*/
+/*    background-color: @main-fg; !* Example dark background *!*/
+/*    padding: 4px 8px;         !* Space around text/icons *!*/
+
+/*}*/
+/* This targets the Waybar module named "custom/player"
+   => In the config, that module's ID is "#custom-player"
+*/
+#custom-player {
+    /*background-image:*/
+    /*        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),*/
+    /*        url("/tmp/spotify_album_art_cropped.jpg");*/
+    /*background-blend-mode: darken;   !* or multiply/overlay/etc. *!    background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    /* Optional: maybe give it a fixed height or some padding
+       so you can actually see the art: */
+    padding: 3px 8px;
+    /* Space around text/icons */
+/*font-weight: bold;*/
+}
+/*#custom-cava_mviz {*/
+/*    color: @pink2;*/
+/*    text-shadow: 1px 1px 2px rgb(247, 166, 215);*/
+/*    padding: 4px 8px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+#custom-separator {
+    font-size: 25px;
+    font-weight: lighter;
+}
+#custom-icon-left {
+    color: #000000;
+    font-size: 34px;
+    margin-top: -24px;
+    margin-right: -14px;
 }
 
-#workspaces button:hover {
-    background-color: rgba(255, 230, 255, 0.9);
-    color: #8c4fbf;
-    text-shadow: 0 0 10px #8c4fbf, 0 0 20px #ffbfff;
+#custom-icon-left-outer {
+    color: #000000;
+    font-size: 34px;
+    margin-top: -24px;
+    margin-right: -14px;
+    margin-left: 10px;
 }
 
-/* Active Workspace */
-#workspaces button.active {
-    background-color: #e5c1ff;
-    color: #4c1c6d;
-    /*border: 1px solid #b573ff;*/
-    text-shadow: 0 0 10px #e5c1ff, 0 0 20px #ffccff;
+#custom-icon-split {
+    background-color: transparent;
+    color: #846bc4;
+    font-size: 12px;
+}
+
+#custom-icon-right {
+    color: #000000;
+    font-size: 34px;
+    margin-top: -24px;
+    margin-left: -13px;
+}
+
+#custom-icon-right-outer {
+    color: #000000;
+    font-size: 34px;
+    margin-top: -24px;
+    margin-left: -13px;
+    margin-right: 10px;
 }

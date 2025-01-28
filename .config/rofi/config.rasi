@@ -6,6 +6,8 @@
 /* ---- Configuration ---- */
 configuration {
     font: "Eurostile Regular 12";
+        click-to-exit: true;
+
 }
 
 /* ---- Window ---- */

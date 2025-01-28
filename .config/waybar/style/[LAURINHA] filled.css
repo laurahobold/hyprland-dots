@@ -1,145 +1,254 @@
-/* Font and base styling */
+/* ---- 💫 Complete Cyberpunk Pink/Purple Theme 💫 ---- */
+/* Define Variables */
+/* Main Colors */
+
+@define-color main-fg         #f4cddb;
+@define-color main-bg         #1c1c1c;
+@define-color main-br         #f4cddb;
+
+/*@define-color active-bg       #b2939b;*/
+/*@define-color active-fg       #1b1116z;*/
+
+@define-color hover-bg        #313244;
+@define-color hover-fg        rgba(205, 214, 244, 0.75);
+
+@define-color white           #ffffff;
+@define-color black           #000000;
+@define-color pink           #ff598b;
+@define-color pink2           #C51C6D;
+
+/* Module Colors */
+
+@define-color module-fg       #f5e0dc;
+
+@define-color cpuinfo         #181825;
+@define-color memory          #1e1e2e;
+@define-color cpu             #313244;
+@define-color distro-fg       #000000;
+@define-color distro-bg       #9399b2;
+@define-color time            #313244;
+@define-color date            #1e1e2e;
+@define-color tray            #181825;
+
+@define-color pulseaudio      #181825;
+@define-color backlight       #1e1e2e;
+@define-color battery         #313244;
+@define-color power           #9399b2;
+
+/* State Colors */
+
+@define-color good            #f5e0dc;
+@define-color warning         #f9e2af;
+@define-color critical        #f38ba8;
+@define-color full            #a6e3a1;
+@define-color charging        #cdd6f4;
+
+
+
+@define-color color1            #25181f;
+@define-color color2         #b17a8c;
+@define-color color3        #7b435a;
+@define-color color4            #8b4d67;
+@define-color color5        #FFC4D6;
+/* General Settings */
 * {
-    font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
-    min-height: 0;
-    font-size: 97%;
-    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-}
-
-window#waybar,
-window#waybar.empty,
-window#waybar.empty #window {
+    font-family: "Oxanium", serif;
+    font-size: 12px;
+    font-weight: normal;
     background-color: transparent;
-    padding: 0px;
-    border: 0px;
-}
-
-/* Tooltip styling */
-tooltip {
-    color: #F2F4F8;
-    background: #262626;
-    opacity: 0.8;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #F2F4F8;
-}
-
-tooltip label {
-    color: #F2F4F8;
-}
-
-/* Module groups styling */
-.modules-right,
-.modules-center,
-.modules-left {
-    background-color: #161616;
-    color: #F2F4F8;
-    border-bottom: 1px solid #F2F4F8;
-    border-radius: 10px;
-    padding: 2px 4px;
-}
-
-/* Individual module button styling */
-#taskbar button,
-#workspaces button {
-    color: #6F6F6F;
-    background-color: transparent;
-    box-shadow: none;
-    text-shadow: none;
-    padding: 0px 4px;
-    border-radius: 9px;
-    transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#taskbar button:hover,
-#workspaces button:hover {
-    color: #F2F4F8;
-    background-color: #393939;
-    padding: 2px 4px;
-    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#taskbar button.active,
-#workspaces button.active {
-    color: #F2F4F8;
-    padding: 8px;
-    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#workspaces button.persistent {
-    border-radius: 10px;
-}
-
-/* Styling for various modules */
-#backlight,
-#battery,
-#bluetooth,
-#clock,
-#cpu,
-#disk,
-#idle_inhibitor,
-#keyboard-state,
-#memory,
-#mode,
-#mpris,
-#network,
-#pulseaudio,
-#taskbar,
-#temperature,
-#tray,
-#window,
-#workspaces {
-    padding: 4px 6px;
-}
-
-/* Indicators */
-#custom-hypridle.notactive,
-#idle_inhibitor.activated {
-    color: #42BE65;
-}
-
-#pulseaudio.muted {
-    color: #FF8389;
-}
-
-#temperature.critical {
-    color: #FF8389;
-}
-
-#battery.critical:not(.charging) {
-    color: #FF8389;
-    animation: blink 0.5s linear infinite alternate;
-}
-
-@keyframes blink {
-    to {
-        color: #000000;
-    }
-}
-
-/* Slider styling */
-#pulseaudio-slider slider,
-#backlight-slider slider {
-    min-width: 0;
+    /*color: #fff2fb;*/
+    /*text-shadow: 0 0 2px rgba(255, 15, 127, 0.91), 0 0 5px rgba(255, 173, 212, 0.89);*/
     min-height: 0;
-    opacity: 0;
-    background-image: none;
+    padding: 0;
     border: none;
+    margin: 0;
 }
 
-#pulseaudio-slider trough,
-#backlight-slider trough {
-    min-width: 80px;
-    min-height: 5px;
-    border-radius: 5px;
-    background-color: #525252;
+/* Bar Settings */
+window#waybar {
+
+    background: @main-bg;
+    /*background:transparent;*/
+
+
 }
 
-#pulseaudio-slider highlight,
-#backlight-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: #78A9FF;
+/* Tooltip */
+tooltip {
+    background: rgba(30, 20, 50, 0.95);
+    color: #f0d8ff;
+    /*border: 1px solid #bf80ff;*/
+    border-radius: 8px;
+    padding: 0px 5px;
+    text-shadow: 0 0 6px #bf80ff;
+}
+.modules-left, .modules-center, .modules-right {
+    margin: 6px;
+    padding: 6px;
+    /*border: 1px solid #000;*/
+    margin: 0 10px 0 10px;
+    /*background: @main-bg;*/
+}
+.module {
+    margin: 0 10px;
+}
+/* Custom Icons */
+motherboard {
+    color: @main-fg;
+    padding: 10px ;
+    background-color: @main-bg;
+}
+
+#backlight {
+    padding-right: 2px;
+}
+#custom-power {
+    padding-left: 10px;
+    padding-right: 2px;
+}
+#custom-menu {
+    padding-right: 8px;
+}
+#custom-cycle_wall {
+    padding-right: 2px;
+}
+#network {
+    padding-right: 12px;
+}
+
+#taskbar.empty {
+    background: none;
+}
+
+
+/* Apply the same style to the listed modules */
+#custom-menu,
+#clock,
+#custom-keyboard,
+#custom-notifications,
+#custom-power,
+#motherboard,
+#custom-player,
+#custom-cava_mviz
+{
+    color: @main-fg;           /* Text color */
+    text-shadow: 1px 1px 2px rgba(155, 130, 130, 0.75);
+    padding: 6px 10px;         /* Space around text/icons */
+    border-radius: 0;       /* Slightly rounded corners */
+    margin-right: 5px;        /* Spacing between modules */
+    border: 1px outset #f7a6c5;
+    box-shadow: 0 0 5px rgba(63, 63, 87, 0.79), 0 0 2px #ff287b;
+}
+#custom-wlr-taskbar {
+    padding: 10px;
+    margin:10px;
+}
+#custom-menu,
+#custom-power {
+    background: @color2;
+    color: #ECEFF4;
+    padding: 4px 8px;
+    /*border-radius: 10px;*/
+    margin-right: 5px;
+}
+
+#clock {
+    background: @color2;
+    padding: 4px 8px;
+    margin-right: 5px;
+}
+
+/*#custom-keyboard {*/
+/*    background-color: @color3;*/
+/*    color: #ECEFF4;*/
+/*    padding: 4px 8px;*/
+/*    border-radius: 4px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+/*#custom-notifications {*/
+/*    background-color: @color4;*/
+/*    color: #ECEFF4;*/
+/*    padding: 4px 8px;*/
+/*    border-radius: 4px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+
+/*#motherboard {*/
+/*    background-color: @main-fg; !* Example dark background *!*/
+/*    padding: 4px 8px;         !* Space around text/icons *!*/
+
+/*}*/
+/* This targets the Waybar module named "custom/player"
+   => In the config, that module's ID is "#custom-player"
+*/
+#custom-player {
+    color: @pink2;
+    /*background-image:*/
+    /*        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),*/
+    /*        url("/tmp/spotify_album_art_cropped.jpg");*/
+    /*background-blend-mode: darken;   !* or multiply/overlay/etc. *!    background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    /* Optional: maybe give it a fixed height or some padding
+       so you can actually see the art: */
+    padding: 7px 8px;         /* Space around text/icons */
+    font-size:12px;
+    /*font-weight: bold;*/
+}
+/*#custom-cava_mviz {*/
+/*    color: @pink2;*/
+/*    text-shadow: 1px 1px 2px rgb(247, 166, 215);*/
+/*    padding: 4px 8px;*/
+/*    margin-right: 5px;*/
+/*}*/
+#custom-player .player-icon {
+    background-color: #4b4b4b; /* Some distinct color */
+    color: #ffffff;           /* Icon color, if you need to override */
+    border-radius: 3px;       /* Rounded corners if you like */
+    padding: 3px 5px;         /* Add padding around the icon */
+    margin-right: 5px;        /* A little spacing after the icon */
+}
+
+/* Another example for custom/browser */
+#custom-browser .browser-icon {
+    background-color: #c75c6f;
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 4px;
+}#custom-icon-left {
+     color: #000000;
+     font-size: 34px;
+     margin-top: -24px;
+     margin-right: -14px;
+ }
+
+#custom-icon-left-outer {
+    color: #000000;
+    font-size: 34px;
+    margin-top: -24px;
+    margin-right: -14px;
+    margin-left: 10px;
+}
+
+#custom-icon-split {
+    background-color: #000000;
+    color: #846bc4;
+    font-size: 12px;
+}
+
+#custom-icon-right {
+    color: #000000;
+    font-size: 34px;
+    margin-top: -24px;
+    margin-left: -13px;
+}
+
+#custom-icon-right-outer {
+    color: #000000;
+    font-size: 34px;
+    margin-top: -24px;
+    margin-left: -13px;
+    margin-right: 10px;
 }

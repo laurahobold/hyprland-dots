@@ -1,131 +1,112 @@
 #!/usr/bin/env bash
-
-## Author  : Aditya Shakya (adi1090x)
-## Github  : @adi1090x
-#
-## Applets : MPD (music)
-
-# Import Current Theme
 source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
-# Theme Elements
-status="`mpc status`"
-if [[ -z "$status" ]]; then
-	prompt='Offline'
-	mesg="MPD is Offline"
-else
-	prompt="`mpc -f "%artist%" current`"
-	mesg="`mpc -f "%title%" current` :: `mpc status | grep "#" | awk '{print $3}'`"
+# Check if Spotify is running
+if ! playerctl -l | grep -q spotify; then
+    rofi -theme-str 'textbox-prompt-colon {str: "";}' \
+        -theme-str 'listview {lines: 1;}' \
+        -dmenu \
+        -p "Spotify" \
+        -mesg "Spotify is not running" \
+        -theme "$theme"
+    exit 0
 fi
 
-if [[ ( "$theme" == *'type-1'* ) || ( "$theme" == *'type-3'* ) || ( "$theme" == *'type-5'* ) ]]; then
-	list_col='1'
-	list_row='6'
-elif [[ ( "$theme" == *'type-2'* ) || ( "$theme" == *'type-4'* ) ]]; then
-	list_col='6'
-	list_row='1'
+# Spotify metadata
+STATUS=$(playerctl -p spotify status 2>/dev/null)
+TITLE=$(playerctl -p spotify metadata title 2>/dev/null)
+ARTIST=$(playerctl -p spotify metadata artist 2>/dev/null)
+ALBUM=$(playerctl -p spotify metadata album 2>/dev/null)
+ART_URL=$(playerctl -p spotify metadata mpris:artUrl 2>/dev/null)
+
+# Album art download and crop
+# Album art download and crop
+#!/usr/bin/env bash
+
+# Paths for album art
+ART_PATH="/tmp/spotify_album_art.jpg"
+CROPPED_ART_PATH="/tmp/spotify_album_art_cropped.jpg"
+
+# Spotify metadata
+ART_URL=$(playerctl -p spotify metadata mpris:artUrl 2>/dev/null)
+
+# Download and crop the album art
+if [[ -n "$ART_URL" ]]; then
+    curl -s "$ART_URL" -o "$ART_PATH"
+    # Ensure cropping from the center to a fixed size (600x300 for example)
+    magick "$ART_PATH" -gravity center -crop 400x250+0+0 "$CROPPED_ART_PATH"
+else
+    # Use a default fallback image if no art is available
+    cp "$HOME/.config/rofi/images/default_album_art.jpg" "$CROPPED_ART_PATH"
 fi
+
+
+# Call the command
+rofi_cmd
+
+
+
+# Prompt and message for Rofi
+PROMPT="$TITLE"
+MESG="$ARTIST"
 
 # Options
-layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
-if [[ "$layout" == 'NO' ]]; then
-	if [[ ${status} == *"[playing]"* ]]; then
-		option_1=" Pause"
-	else
-		option_1=" Play"
-	fi
-	option_2=" Stop"
-	option_3=" Previous"
-	option_4=" Next"
-	option_5=" Repeat"
-	option_6=" Random"
+if [[ $STATUS == "Playing" ]]; then
+    OPTION_1=" "
 else
-	if [[ ${status} == *"[playing]"* ]]; then
-		option_1=""
-	else
-		option_1=""
-	fi
-	option_2=""
-	option_3=""
-	option_4=""
-	option_5=""
-	option_6=""
+    OPTION_1="  "
 fi
-
-# Toggle Actions
-active=''
-urgent=''
-# Repeat
-if [[ ${status} == *"repeat: on"* ]]; then
-    active="-a 4"
-elif [[ ${status} == *"repeat: off"* ]]; then
-    urgent="-u 4"
-else
-    option_5=" Parsing Error"
-fi
-# Random
-if [[ ${status} == *"random: on"* ]]; then
-    [ -n "$active" ] && active+=",5" || active="-a 5"
-elif [[ ${status} == *"random: off"* ]]; then
-    [ -n "$urgent" ] && urgent+=",5" || urgent="-u 5"
-else
-    option_6=" Parsing Error"
-fi
+OPTION_2="󰒟 "
+OPTION_3=" 󰳝 "
+OPTION_4="󰳟 "
 
 # Rofi CMD
 rofi_cmd() {
-	rofi -theme-str "listview {columns: $list_col; lines: $list_row;}" \
-		-theme-str 'textbox-prompt-colon {str: "";}' \
-		-dmenu \
-		-p "$prompt" \
-		-mesg "$mesg" \
-		${active} ${urgent} \
-		-markup-rows \
-		-theme ${theme}
+    rofi -theme-str 'listview {lines: 4;}' \
+        -theme-str 'textbox-prompt-colon {str: "";}' \
+        -theme-str "window { background-image: url(\"$CROPPED_ART_PATH\"); }" \
+        -dmenu \
+        -p "$PROMPT" \
+        -mesg "$MESG" \
+        -markup-rows \
+        -theme "$theme"
 }
 
-# Pass variables to rofi dmenu
+
+# Pass variables to Rofi dmenu
 run_rofi() {
-	echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5\n$option_6" | rofi_cmd
+    echo -e "$OPTION_3\n$OPTION_1\n$OPTION_4\n$OPTION_2" | rofi_cmd
 }
 
 # Execute Command
 run_cmd() {
-	if [[ "$1" == '--opt1' ]]; then
-		mpc -q toggle && notify-send -u low -t 1000 " `mpc current`"
-	elif [[ "$1" == '--opt2' ]]; then
-		mpc -q stop
-	elif [[ "$1" == '--opt3' ]]; then
-		mpc -q prev && notify-send -u low -t 1000 " `mpc current`"
-	elif [[ "$1" == '--opt4' ]]; then
-		mpc -q next && notify-send -u low -t 1000 " `mpc current`"
-	elif [[ "$1" == '--opt5' ]]; then
-		mpc -q repeat
-	elif [[ "$1" == '--opt6' ]]; then
-		mpc -q random
-	fi
+    if [[ "$1" == '--opt1' ]]; then
+        playerctl -p spotify play-pause
+    elif [[ "$1" == '--opt2' ]]; then
+        playerctl -p spotify stop
+    elif [[ "$1" == '--opt3' ]]; then
+        playerctl -p spotify previous
+    elif [[ "$1" == '--opt4' ]]; then
+        playerctl -p spotify next
+    fi
+    # Re-run the script after executing a command
 }
 
+
 # Actions
-chosen="$(run_rofi)"
-case ${chosen} in
-    $option_1)
-		run_cmd --opt1
+CHOSEN="$(run_rofi)"
+case "$CHOSEN" in
+    "$OPTION_1")
+        run_cmd --opt1
         ;;
-    $option_2)
-		run_cmd --opt2
+    "$OPTION_2")
+        run_cmd --opt2
         ;;
-    $option_3)
-		run_cmd --opt3
+    "$OPTION_3")
+        run_cmd --opt3
         ;;
-    $option_4)
-		run_cmd --opt4
-        ;;
-    $option_5)
-		run_cmd --opt5
-        ;;
-    $option_6)
-		run_cmd --opt6
+    "$OPTION_4")
+        run_cmd --opt4
         ;;
 esac

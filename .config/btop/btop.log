@@ -1,0 +1,37 @@
+
+2024/12/18 (11:42:33) | ===> btop++ v.1.3.2
+2024/12/18 (11:42:33) | INFO: Logger set to INFO
+2024/12/18 (11:42:33) | INFO: Logger set to DEBUG
+2024/12/18 (11:45:19) | DEBUG: Loading theme file: /home/laurinha/.config/btop/themes/catppuccin_latte.theme
+2024/12/18 (11:45:22) | DEBUG: Loading theme file: /home/laurinha/.config/btop/themes/catppuccin_macchiato.theme
+2024/12/18 (11:45:22) | DEBUG: Loading theme file: /home/laurinha/.config/btop/themes/catppuccin_mocha.theme
+2024/12/18 (11:45:23) | DEBUG: Loading theme file: /usr/share/btop/themes/HotPurpleTrafficLight.theme
+2024/12/18 (11:45:27) | DEBUG: Loading theme file: /usr/share/btop/themes/HotPurpleTrafficLight.theme
+2024/12/18 (11:45:30) | DEBUG: Loading theme file: /usr/share/btop/themes/adapta.theme
+2024/12/18 (11:45:31) | DEBUG: Loading theme file: /usr/share/btop/themes/adwaita.theme
+2024/12/18 (11:45:32) | DEBUG: Loading theme file: /usr/share/btop/themes/ayu.theme
+2024/12/18 (11:45:33) | DEBUG: Loading theme file: /usr/share/btop/themes/dracula.theme
+2024/12/18 (11:45:34) | DEBUG: Loading theme file: /usr/share/btop/themes/dusklight.theme
+2024/12/18 (11:45:34) | DEBUG: Loading theme file: /usr/share/btop/themes/elementarish.theme
+2024/12/18 (11:45:35) | DEBUG: Loading theme file: /usr/share/btop/themes/everforest-dark-hard.theme
+2024/12/18 (11:45:35) | DEBUG: Loading theme file: /usr/share/btop/themes/everforest-dark-medium.theme
+2024/12/18 (11:45:36) | DEBUG: Loading theme file: /usr/share/btop/themes/flat-remix-light.theme
+2024/12/18 (11:45:36) | DEBUG: Loading theme file: /usr/share/btop/themes/flat-remix.theme
+2024/12/18 (11:45:38) | DEBUG: Loading theme file: /usr/share/btop/themes/greyscale.theme
+2024/12/18 (11:45:38) | DEBUG: Loading theme file: /usr/share/btop/themes/gruvbox_dark.theme
+2024/12/18 (11:45:39) | DEBUG: Loading theme file: /usr/share/btop/themes/gruvbox_dark_v2.theme
+2024/12/18 (11:45:39) | DEBUG: Loading theme file: /usr/share/btop/themes/gruvbox_material_dark.theme
+2024/12/18 (11:45:40) | DEBUG: Loading theme file: /usr/share/btop/themes/horizon.theme
+2024/12/18 (11:45:45) | DEBUG: Loading theme file: /usr/share/btop/themes/kyli0x.theme
+2024/12/18 (11:45:45) | DEBUG: Loading theme file: /usr/share/btop/themes/matcha-dark-sea.theme
+2024/12/18 (11:45:46) | DEBUG: Loading theme file: /usr/share/btop/themes/monokai.theme
+2024/12/18 (11:45:50) | DEBUG: Loading theme file: /usr/share/btop/themes/night-owl.theme
+2024/12/18 (11:45:51) | DEBUG: Loading theme file: /usr/share/btop/themes/nord.theme
+2024/12/18 (11:45:51) | DEBUG: Loading theme file: /usr/share/btop/themes/onedark.theme
+2024/12/18 (11:45:55) | DEBUG: Loading theme file: /usr/share/btop/themes/paper.theme
+2024/12/18 (11:45:55) | DEBUG: Loading theme file: /usr/share/btop/themes/solarized_dark.theme
+2024/12/18 (11:45:55) | DEBUG: Loading theme file: /usr/share/btop/themes/solarized_light.theme
+2024/12/18 (11:45:56) | DEBUG: Loading theme file: /usr/share/btop/themes/tokyo-night.theme
+2024/12/18 (11:46:00) | DEBUG: Loading theme file: /usr/share/btop/themes/tokyo-storm.theme
+2024/12/18 (11:46:01) | DEBUG: Loading theme file: /usr/share/btop/themes/tomorrow-night.theme
+2024/12/18 (11:46:03) | DEBUG: Loading theme file: /usr/share/btop/themes/whiteout.theme

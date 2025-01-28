@@ -7,8 +7,8 @@
 {
 // CIRCLES Style
 "hyprland/workspaces": {
-	"active-only": false,
-	"all-outputs": true,
+	"active-only": true,
+	"all-outputs": false,
 	"format": "{icon}",
 	"show-special": false,
 	"on-click": "activate",
@@ -16,8 +16,9 @@
 	"on-scroll-down": "hyprctl dispatch workspace e-1",
     "sort-by-number": true,
     "persistent-workspaces": {
-      "*": 5
-	},
+          "DP-1": [ 1, 2, 3 ], // workspace 1 shown on DP-3
+          "HDMI-A-1": [ 4, 5, 6 ], // workspaces 2 and 3 shown on DP-1
+        },
 },
 // ROMAN Numerals style
 "hyprland/workspaces#roman": {

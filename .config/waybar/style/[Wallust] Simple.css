@@ -1,159 +1,14 @@
-/* Font and base styling */
-* {
-	font-family: "JetBrainsMono Nerd Font";
-	font-weight: bold;
-	min-height: 0;
-	font-size: 97%;
-	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-}
-
-window#waybar,
-window#waybar.empty,
-window#waybar.empty #window {
-	background-color: transparent;
-	padding: 0px;
-	border: 0px;
-}
-
-/* Tooltip styling */
-tooltip {
-	color: #F3F3F3;
-	background: #393939;
-	opacity: 0.8;
-	border-radius: 10px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #F3F3F3;
-}
-
-tooltip label {
-	color: #F3F3F3;
-}
-
-/* Module groups styling */
-.modules-right,
-.modules-center,
-.modules-left {
-	background-color: #161616;
-	color: #F3F3F3;
-	border-bottom: 1px solid #F3F3F3;
-	border-radius: 10px;
-	padding: 2px 4px;
-}
-
-/* Individual module button styling */
-#taskbar button,
-#workspaces button {
-	color: #BFBFBF;
-	background-color: transparent;
-	box-shadow: none;
-	text-shadow: none;
-	padding: 0px 4px;
-	border-radius: 9px;
-	transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#taskbar button:hover,
-#workspaces button:hover {
-	color: #FFFFFF;
-	background-color: #7f849c;
-	padding: 2px 4px;
-	transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#taskbar button.active,
-#workspaces button.active {
-	color: #FFFFFF;
-	padding: 8px;
-	transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#workspaces button.persistent {
-	border-radius: 10px;
-}
-
-/* Styling for various modules */
-#backlight,
-#battery,
-#bluetooth,
-#clock,
-#cpu,
-#disk,
-#idle_inhibitor,
-#keyboard-state,
-#memory,
-#mode,
-#mpris,
-#network,
-#pulseaudio,
-#taskbar,
-#temperature,
-#tray,
-#window,
-#workspaces {
-	padding: 4px 6px;
-}
-
-/* Indicators */
-#custom-hypridle.notactive,
-#idle_inhibitor.activated {
-	color: #00FF00;
-}
-
-#pulseaudio.muted {
-	color: #FF3D3D;
-}
-
-#temperature.critical {
-	color: #FF3D3D;
-}
-
-#battery.critical:not(.charging) {
-	color: #FF3D3D;
-	animation: blink 0.5s linear infinite alternate;
-}
-
-@keyframes blink {
-	to {
-		color: #000000;
-	}
-}
-
-/* Slider styling */
-#pulseaudio-slider slider,
-#backlight-slider slider {
-	min-width: 0;
-	min-height: 0;
-	opacity: 0;
-	background-image: none;
-	border: none;
-}
-
-#pulseaudio-slider trough,
-#backlight-slider trough {
-	min-width: 80px;
-	min-height: 5px;
-	border-radius: 5px;
-}
-
-#pulseaudio-slider highlight,
-#backlight-slider highlight {
-	min-width: 10px;
-	border-radius: 5px;
-}
 /* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
 /* Wallust - Simple */
 
 *{
-font-family: "JetBrainsMono Nerd Font";
-font-weight: bold;
-min-height: 0;
-/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-font-size: 97%;
-font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+	font-family: "EurostileMed";
+	min-height: 0;
+	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+	font-size: 100%;
+	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
-@import '../../.config/waybar/wallust/colors-waybar.css';
 
 #waybar.empty, #waybar.tiled, #waybar.floating {
 	background-color: transparent;
@@ -162,9 +17,9 @@ font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 window#waybar,
 window#waybar.empty,
 window#waybar.empty #window {
-    background-color: transparent;
-    padding: 0px;
-    border: 0px;
+	background-color: transparent;
+	padding: 0px;
+	border: 0px;
 }
 
 tooltip {
@@ -208,41 +63,41 @@ tooltip {
 /*-----modules indv----*/
 
 #workspaces button {
-    color: @color2;
-    box-shadow: none;
+	color: @color2;
+	box-shadow: none;
 	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    padding-left: 4px;
-    padding-right: 4px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+	padding: 0px;
+	border-radius: 9px;
+	padding-left: 4px;
+	padding-right: 4px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button.active {
-    color: @foreground;
-    background-color: @color2;
-    padding-left: 8px;
-    padding-right: 8px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	color: @foreground;
+	background-color: @color2;
+	padding-left: 8px;
+	padding-right: 8px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button.focused {
-    color: @color4;
+	color: @color4;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    border-radius: 10px;
+	color: #11111b;
+	border-radius: 10px;
 }
 
 #workspaces button:hover {
-    color: @color4;
-    padding-left: 2px;
-    padding-right: 2px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	color: @color4;
+	padding-left: 2px;
+	padding-right: 2px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #backlight,
@@ -327,38 +182,38 @@ tooltip {
 	color: #cc3436;
 }
 #temperature.critical {
-    background-color: #ff0000;
+	background-color: #ff0000;
 }
 
 @keyframes blink {
-    to {
-        color: #000000;
-    }
+	to {
+		color: #000000;
+	}
 }
 
 #taskbar button.active {
 	color: @foreground;
-    background-color: @color2;
+	background-color: @color2;
 	border-radius: 30px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #taskbar button:hover {
-    padding-left: 3px;
-    padding-right: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
 	border-radius: 15px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #battery.critical:not(.charging) {
-    color: #f53c3c;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+	color: #f53c3c;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 #pulseaudio-slider slider {

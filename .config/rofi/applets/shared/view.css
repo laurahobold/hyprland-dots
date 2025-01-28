@@ -1,0 +1,69 @@
+:root {
+    --background: rgba(26, 26, 26, 0.94);
+    --background-alt: #281657;
+    --foreground: #FFFFFF;
+    --selected: #DF5296;
+    --active: #6E77FF;
+    --urgent: #8E3596;
+}
+
+body {
+    font-family: "EurostileMed", sans-serif;
+    background-color: var(--background);
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.selected {
+    background-color: var(--selected);
+    color: var(--background);
+}
+
+.active {
+    background-color: var(--active);
+    color: var(--background);
+}
+
+.urgent {
+    background-color: var(--urgent);
+    color: var(--background);
+}
+
+.alt-background {
+    background-color: var(--background-alt);
+    color: var(--foreground);
+}
+
+:root {
+    --main-fg: #f4cddb;
+    --main-bg: #1c1c1c;
+    --sec-bg: #ff598b;
+    --main-br: #cdd6f4;
+
+    --active-bg: #9399b2;
+    --active-fg: #1b1116;
+
+    --hover-bg: #313244;
+    --hover-fg: rgba(244, 205, 219, 0.75);
+
+    --white: #ffffff;
+    --black: #000000;
+
+    /* Module Colors */
+    --module-fg: #f5e0dc;
+    --workspaces: #181825;
+
+    --cpuinfo: #181825;
+    --memory: #1e1e2e;
+    --cpu: #313244;
+    --distro-fg: #000000;
+    --distro-bg: #9399b2;
+    --time: #313244;
+    --date: #1e1e2e;
+    --tray: #181825;
+
+    --1: #25181f;
+    --2: #2e1e26;
+    --3: #44313e;
+    --4: #b2939b;
+}

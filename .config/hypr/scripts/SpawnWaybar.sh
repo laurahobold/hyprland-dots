@@ -5,7 +5,7 @@
 pkill -x ags
 
 # Kill all existing instances of waybar
-#killall waybar
+killall waybar
 
 # Wait to ensure waybar processes are fully killed
 
@@ -21,5 +21,5 @@ sleep 2
 #else
 #    echo "Waybar is not running. Starting ags."
 #fi
-
+#
 #exit 0

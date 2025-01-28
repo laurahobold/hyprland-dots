@@ -1,0 +1,8 @@
+{
+    "layer": "bottom",
+    "height": 30,
+    "position": "bottom",
+    "modules-center": [ "wlr/taskbar" ],
+    dock"reload_style_on_change": true,
+    "mode": "overlay",
+  }

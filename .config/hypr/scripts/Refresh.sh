@@ -22,13 +22,18 @@ for _prs in "${_ps[@]}"; do
     fi
 done
 
+
+killall nwg-dock-hyprland
+
 # quit ags
 ags -q
 
 sleep 0.3
 #Restart waybar
-#waybar &
+hyprpanel &
 
+waybar &
+nwg-dock-hyprland -i 25 -lp "bottom" -o DP-1 -mb 10 -s style.css &
 # relaunch swaync
 sleep 0.5
 swaync > /dev/null 2>&1 &

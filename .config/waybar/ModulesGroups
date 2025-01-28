@@ -23,14 +23,21 @@
 	]
 },
 "group/motherboard": {
-	"orientation": "horizontal",
+    "orientation": "inherit",
+	"click-to-reveal": true,
+		"drawer": {
+    		"transition-duration": 500,
+    		"children-class": "cpu",
+    		"transition-left-to-right": true
+            },
 	"modules": [
 		"cpu",
-		"memory",
 		"temperature",
+		"memory",
 		"disk",
 	]
 },
+
 
 "group/mobo_drawer": {
 	"orientation": "inherit",
@@ -88,9 +95,36 @@
         },
 	"modules": [
 		"custom/power",
+
 		"custom/lock",
 		"keyboard-state",
 		"custom/keyboard",
 	]
 },
+"group/right": {
+	"orientation": "inherit",
+	"modules": [
+    "custom/keyboard",
+	]
+},
+"group/player": {
+    "orientation": "inherit",
+     	"modules": [
+        "custom/player",
+         "custom/cava_mviz",
+     	]
+     },
+     "group/taskbar": {
+         "orientation": "inherit",
+     	"click-to-reveal": true,
+     		"drawer": {
+         		"transition-duration": 500,
+         		"children-class": "custom/taskicon",
+         		"transition-left-to-right": true
+                 },
+     	"modules": [
+     	"custom/taskicon",
+       	"wlr/taskbar",
+     	]
+     },
 }
